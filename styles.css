@@ -92,10 +92,6 @@ section#gallery h1::before {
     background: none; /* On enlève l'image de fond pour la section de la galerie */
 }
 
-section#epicgame h1::before {
-    background: none; /* On enlève l'image de fond pour la section Epic Game */
-}
-
 p {
     font-size: 1.2em;
     margin-bottom: 20px;
@@ -110,23 +106,22 @@ img {
 
 .gallery-container {
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
-    margin-top: 50px;
+    justify-content: space-around;
+    gap: 20px; /* Espace entre les éléments */
+    padding: 20px;
 }
 
 .gallery-item {
-    width: 200px;
-    margin: 20px;
+    flex: 0 1 30%; /* Ajuste les éléments pour qu'ils prennent environ 30% de la largeur, ce qui permet d'avoir trois éléments par ligne */
     text-align: center;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    margin-bottom: 20px;
 }
 
-.gallery-item.show {
-    opacity: 1;
-    transform: translateY(0);
+.gallery-item img {
+    width: 200px; /* Ajustez la taille des logos selon vos besoins */
+    height: auto;
+    margin-bottom: 10px;
 }
 
 .logo-name {
@@ -139,4 +134,46 @@ img {
 .logo-description {
     color: #ffffff;
     font-size: 1.2em;
+}
+
+
+.logo-description {
+    position: relative;
+    display: inline-block;
+}
+
+.logo-description img {
+    width: 200px; /* Ajustez la taille des logos selon vos besoins */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.logo-description p {
+    color: #ffffff;
+    font-size: 1.2em;
+    position: absolute;
+    bottom: -30px; /* Ajustez la distance entre le logo et la description */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+}
+.social-icons {
+    position: absolute;
+    top: 40%; /* Déplacer légèrement vers le haut */
+    left: 50%;
+    transform: translate(0%, 0%);
+    z-index: 1;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 20px; /* Augmentez la marge pour séparer les logos */
+}
+
+.social-icons img {
+    width: 1080px; /* Augmentez la taille des logos */
+    height: auto;
+}
+section#epicgame h1::before {
+    background: none; /* On enlève l'image de fond pour la section Epic Game */
 }
