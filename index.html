@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les IA</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .social-icons {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .social-icons img {
+            width: 50px; /* Ajustez la taille selon vos besoins */
+            margin: 0 10px; /* Ajustez la marge selon vos besoins */
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#socials">Socials</a></li>
+            <li><a href="#support">Support</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+        </ul>
+    </nav>
+    <section id="home" class="content active">
+        <h1>Bienvenue et découvre les IA</h1>
+        <p>Vous allez trouver n'importe quelle IA.</p>
+        <img src="images/futuristic_home.jpg" alt="Home Image">
+    </section>
+    <section id="socials" class="content">
+        <h1>Nos Réseaux Sociaux</h1>
+        <div class="social-icons">
+            <a href="lien_vers_votre_page_instagram" target="_blank"><img src="images/instagram_logo.png" alt="Instagram"></a>
+            <a href="lien_vers_votre_page_twitter" target="_blank"><img src="images/twitter_logo.png" alt="Twitter"></a>
+            <a href="lien_vers_votre_page_discord" target="_blank"><img src="images/discord_logo.png" alt="Discord"></a>
+        </div>
+        <p>Suivez-nous pour plus de mises à jour.</p>
+        <img src="images/social_media.jpg" alt="Social Media Image">
+    </section>
+    <section id="support" class="content">
+        <h1>Support</h1>
+        <p>Nous sommes ici pour vous aider.</p>
+        <img src="images/support.jpg" alt="Support Image">
+    </section>
+    <section id="gallery" class="content">
+        <h1>Galerie</h1>
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <p class="logo-name">Blackbox AI</p>
+                <img src="images/blackbox_logo.jpg" alt="Blackbox Logo">
+                <p class="logo-description">Blackbox AI est utilisé pour les programmations, on peut y retrouver : Du Python , du Java Script , de l'HTML , du C# et plus encore !</p>
+            </div>
+            <div class="gallery-item">
+                <p class="logo-name">Yiaho</p>
+                <img src="images/yiaho_logo.png" alt="Yiaho Logo">
+                <p class="logo-description">Yiaho est un  site où il y a plusieurs IA créé pour un domaine chacun , il y en a un qui crée des images , un autre qui aide les entreprises , un qui est pour les maths, etc...</p>
+            </div>
+            <div class="gallery-item">
+                <p class="logo-name">ChatGPT</p>
+                <img src="images/chatgpt_logo.png" alt="ChatGPT Logo">
+                <p class="logo-description">ChatGpt est une AI Général , on peut tout y retrouver mais ça n'est pas aussi précis que les AI spécialisées dans une matière.</p>
+            </div>
+            <div class="gallery-item">
+                <p class="logo-name">MidJourney</p>
+                <img src="images/midjourney_logo.png" alt="MidJourney Logo">
+                <p class="logo-description">MidJourney est l'AI la plus connu dans son domaine , elle créer des images impressionnantes . Elle est souvent utiliser pour mettre des images dans des livres quand on ne sait pas dessiner , en mettre dans un exposé , etc... .</p>
+            </div>
+            <!-- Ajoutez d'autres items de la galerie ici -->
+        </div>
+    </section>
+    
+    <script src="script.js"></script>
+</body>
+</html>

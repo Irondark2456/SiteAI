@@ -1,0 +1,176 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #2b2b2b, #1a1a1a);
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+nav {
+    background-color: #000;
+    padding: 1em 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #00ffcc;
+}
+
+section.content {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+    padding: 100px 20px;
+    text-align: center;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+section.content.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+h1::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+section#home h1::before {
+    background-image: url('images/futuristic_home.jpg');
+}
+
+section#socials h1::before {
+    background-image: url('images/social_media.jpg');
+}
+
+section#support h1::before {
+    background-image: url('images/support.jpg');
+}
+
+section#gallery h1::before {
+    background: none; /* On enlève l'image de fond pour la section de la galerie */
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px; /* Espace entre les éléments */
+    padding: 20px;
+}
+
+.gallery-item {
+    flex: 0 1 30%; /* Ajuste les éléments pour qu'ils prennent environ 30% de la largeur, ce qui permet d'avoir trois éléments par ligne */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.gallery-item img {
+    width: 200px; /* Ajustez la taille des logos selon vos besoins */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.logo-name {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.logo-description {
+    color: #ffffff;
+    font-size: 1.2em;
+}
+
+
+.logo-description {
+    position: relative;
+    display: inline-block;
+}
+
+.logo-description img {
+    width: 200px; /* Ajustez la taille des logos selon vos besoins */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.logo-description p {
+    color: #ffffff;
+    font-size: 1.2em;
+    position: absolute;
+    bottom: -30px; /* Ajustez la distance entre le logo et la description */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+}
+.social-icons {
+    position: absolute;
+    top: 40%; /* Déplacer légèrement vers le haut */
+    left: 50%;
+    transform: translate(0%, 0%);
+    z-index: 1;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 20px; /* Augmentez la marge pour séparer les logos */
+}
+
+.social-icons img {
+    width: 1080px; /* Augmentez la taille des logos */
+    height: auto;
+}
