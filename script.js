@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     section.classList.remove('active');
                     setTimeout(() => {
                         section.style.display = 'none';
-                    }, 500);
+                    }, 500); // Durée de la transition en millisecondes
                 }
             });
 
@@ -23,8 +23,4 @@ document.addEventListener('DOMContentLoaded', function() {
                 target.style.display = 'block';
                 setTimeout(() => {
                     target.classList.add('active');
-                }, 50);
-            }, 500);
-        });
-    });
-});
+                }, 50); // Légère attente pour permettre
