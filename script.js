@@ -17,7 +17,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     }, 500);
                 }
             });
-
+// Compteur de visiteurs
+let visitorCount = localStorage.getItem('visitorCount') || 0;
+visitorCount++;
+localStorage.setItem('visitorCount', visitorCount);
+document.getElementById('visitor-count').innerText = visitorCount;
             const target = document.querySelector(this.getAttribute('href'));
             setTimeout(() => {
                 target.style.display = 'block';
