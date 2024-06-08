@@ -18,10 +18,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
 // Compteur de visiteurs
-let visitorCount = localStorage.getItem('visitorCount') || 0;
-visitorCount++;
-localStorage.setItem('visitorCount', visitorCount);
-document.getElementById('visitor-count').innerText = visitorCount;
+const visitorId = localStorage.getItem('visitorId');
+if (!visitorId) {
+    // Première visite de l'utilisateur
+    localStorage.setItem('visitorId', Date.now().toString());
+    let visitorCount = localStorage.getItem('visitorCount') || 0;
+    visitorCount++;
+    localStorage.setItem('visitorCount', visitorCount);
+}
+
+document.getElementById('visitor-count').innerText = localStorage.getItem('visitorCount');
             const target = document.querySelector(this.getAttribute('href'));
             setTimeout(() => {
                 target.style.display = 'block';
